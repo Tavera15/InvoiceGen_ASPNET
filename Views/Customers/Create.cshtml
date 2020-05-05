@@ -1,0 +1,17 @@
+﻿@using InvoiceGen_ASPNET.Models
+@model CustomerModel
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Create Customer</title>
+</head>
+<body>
+    @using (Html.BeginForm())
+    { 
+        <p>@Html.LabelFor(c => c.mZipCode)</p>
+        @Html.TextBoxFor(s => s.mZipCode)
+        
+    }
+
+</body>
+</html>

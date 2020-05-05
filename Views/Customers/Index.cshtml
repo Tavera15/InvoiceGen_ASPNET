@@ -1,0 +1,17 @@
+﻿@using InvoiceGen_ASPNET.Models
+@model IEnumerable<InvoiceGen_ASPNET.Models.CustomerModel>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Customers</title>
+</head>
+<body>
+    <h1>Customers</h1>
+
+    @foreach(var c in Model)
+    {
+        <p>@c.mName | @c.mAddress | @c.mCity | @c.mState | @c.mZipCode</p>
+    }
+
+</body>
+</html>
