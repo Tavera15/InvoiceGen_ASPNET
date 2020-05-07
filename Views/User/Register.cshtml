@@ -1,0 +1,28 @@
+﻿@using InvoiceGen_ASPNET.Models
+@model InvoiceGen_ASPNET.Models.RegistrationModel
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Register</title>
+</head>
+<body>
+    @using (Html.BeginForm("Register", "User", FormMethod.Post))
+    {
+        @Html.AntiForgeryToken()
+
+        <p>@Html.LabelFor(user => user.mName)</p>
+        @Html.TextBoxFor(user => user.mName)
+
+        <p>@Html.LabelFor(user => user.mEmail)</p>
+        @Html.TextBoxFor(user => user.mEmail)
+
+        <p>@Html.LabelFor(user => user.mPassword)</p>
+        @Html.PasswordFor(user => user.mPassword)
+
+        <p>@Html.LabelFor(user => user.mConfirmPassword)</p>
+        @Html.PasswordFor(user => user.mConfirmPassword)
+
+        <button type="submit">submit</button>
+    }
+</body>
+</html>

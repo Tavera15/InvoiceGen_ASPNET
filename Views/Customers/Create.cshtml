@@ -6,11 +6,24 @@
     <title>Create Customer</title>
 </head>
 <body>
-    @using (Html.BeginForm())
-    { 
-        <p>@Html.LabelFor(c => c.mZipCode)</p>
-        @Html.TextBoxFor(s => s.mZipCode)
+    @using (Html.BeginForm("Create", "Customers", FormMethod.Post))
+    {
+        <p>@Html.LabelFor(customer => customer.mName)</p>
+        @Html.TextBoxFor(customer => customer.mName)
         
+        <p>@Html.LabelFor(customer => customer.mAddress)</p>
+        @Html.TextBoxFor(customer => customer.mAddress)
+        
+        <p>@Html.LabelFor(customer => customer.mCity)</p>
+        @Html.TextBoxFor(customer => customer.mCity)
+
+        <p>@Html.LabelFor(customer => customer.mState)</p>
+        @Html.TextBoxFor(customer => customer.mState)
+
+        <p>@Html.LabelFor(customer => customer.mZipCode)</p>
+        @Html.TextBoxFor(customer => customer.mZipCode)
+
+        <button type="submit">Submit</button>
     }
 
 </body>

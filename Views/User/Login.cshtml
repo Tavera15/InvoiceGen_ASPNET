@@ -1,0 +1,22 @@
+﻿@using InvoiceGen_ASPNET.Models
+@model InvoiceGen_ASPNET.Models.LoginModel
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Login</title>
+</head>
+<body>
+    @using (Html.BeginForm("Login", "User", FormMethod.Post))
+    {
+        @Html.AntiForgeryToken()
+
+        <p>@Html.LabelFor(user => user.mEmail)</p>
+        @Html.TextBoxFor(user => user.mEmail)
+
+        <p>@Html.LabelFor(user => user.mPassword)</p>
+        @Html.PasswordFor(user => user.mPassword)
+
+        <button type="submit">Login</button>
+    }
+</body>
+</html>

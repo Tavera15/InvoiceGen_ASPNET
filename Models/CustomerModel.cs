@@ -8,6 +8,8 @@ namespace InvoiceGen_ASPNET.Models
 {
     public class CustomerModel
     {
+        // User ID that this customer belongs to
+
         [DisplayName("Customer Name")]
         public string mName { get; set; }
 

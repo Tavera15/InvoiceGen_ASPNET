@@ -1,0 +1,14 @@
+﻿@using InvoiceGen_ASPNET.Models
+@model IEnumerable<InvoiceGen_ASPNET.Models.ProductsAndServicesModel>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Products and Services</title>
+</head>
+<body>
+    @foreach(var ps in Model)
+    {
+        <p>@ps.mName | @ps.mPrice</p>
+    }
+</body>
+</html>
